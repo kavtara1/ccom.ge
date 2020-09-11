@@ -1,0 +1,108 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 75px;
+  background-color: black;
+}
+
+footer> img {
+  width: 35px;
+}
+footer p {
+  color: #FFFFFF;
+  letter-spacing: 5px;
+}
+
+header {
+
+  /*position: absolute;*/
+  /*left: 100px;*/
+  /*top: 0;*/
+  /*z-index: 100;*/
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 140px;
+}
+.logo {
+  width: 250px;
+
+}
+.logo_link {
+  animation: moveInfromLeft;
+  animation-name: moveInfromLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+
+}
+.none {
+  display: none;
+}
+@keyframes moveInfromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-1000px);
+
+  }
+
+  100% {
+
+    opacity: 1;
+    transform: translate(0);
+
+  }
+}
+@keyframes navMoveInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-1000px);
+
+
+
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+
+  }
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  float: right;
+  align-items: center;
+  animation: navMoveInFromLeft;
+  animation-name: navMoveInFromLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  /*position: absolute;*/
+  /*left: 800px;*/
+  /*z-index: 5;*/
+  position: relative;
+  top: 35px;
+  background-color: black;
+
+
+}
+
+
+.nav li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  text-transform: uppercase;
+  color: #FFF;
+}
+.nav li  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+

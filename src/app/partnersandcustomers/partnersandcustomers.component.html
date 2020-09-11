@@ -1,0 +1,13 @@
+
+<section class="partners-text">
+  <div class="container" *ngFor="let item of partnersAndCustomers">
+    <h1> {{item.title}} </h1>
+    <p>{{item.description}}</p>
+  </div >
+  <div class="sectoin-img">
+    <a href="#solutions"><img src="/assets/images/down-arrow.png" alt=""></a>
+  </div>
+</section>
+<app-partners></app-partners>
+<app-customers></app-customers>
+

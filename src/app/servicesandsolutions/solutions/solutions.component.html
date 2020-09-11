@@ -1,0 +1,19 @@
+<section id="solutions">
+  <h2>SOLUTIONS</h2>
+  <div class="solution-list">
+    <div class="solution">
+      <ul>
+        <li *ngFor="let item of solution">
+          <img [src]='item.image' alt="" class="solution-img">
+          <h3 class="solution-heading">{{item.title}}</h3>
+          <div style="width: 80px; height: 3px; background-color: #094fa3; margin-top: 15px" ></div>
+          <p class="solution-text">
+            {{item.description}}
+          </p>
+        </li>
+      </ul>
+
+
+    </div>
+  </div>
+</section>

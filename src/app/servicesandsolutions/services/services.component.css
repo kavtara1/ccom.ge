@@ -1,0 +1,45 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+section h2 {
+  font-size: 33px;
+ padding-bottom: 30px;
+}
+.service_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.service_list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+.service_list li p {
+  padding-bottom: 25px;
+}
+
+.service_list p {
+  width: 450px;
+  padding-top: 25px;
+}
+
+section h2::after {
+  display: block;
+  content: '';
+  width: 88px;
+  height: 5px;
+  background-color: #094fa3;
+  position: relative;
+  top: 10px;
+  right: -40px;
+}

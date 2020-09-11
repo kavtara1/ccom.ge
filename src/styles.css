@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: light;
+  src: url("/assets/fonts/NovecentoWideLight.otf");
+}
+* {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: light, sans-serif;
+
+}
+body {
+  margin: 0 auto;
+  max-width: 1920px;
+  background-color: #FFFFFF;
+}
