@@ -121,3 +121,45 @@ h2::after {
   margin-top: 50px;
 
 }
+@media only screen  and (min-width: 320px) and (max-width: 420px) {
+  .contact {
+    flex-direction: column;
+    height: 1355px;
+  }
+  .adress-div {
+    align-items: center;
+  }
+  .wrapper {
+    align-items: center;
+  }
+  .address {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  svg {
+    order: 1;
+    padding-bottom: 20px;
+  }
+  h1::after {
+    right: -21px;
+  }
+  h2::after {
+    width: 63px;
+    right: -44px;
+  }
+  iframe {
+    width: 320px;
+  }
+  .map-and-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .first_text,.second_text {
+    font-size: 13px;
+    width: 300px;
+  }
+}

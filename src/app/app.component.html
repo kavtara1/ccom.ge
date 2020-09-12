@@ -9,6 +9,12 @@
         <li><a routerLink="/contact">Contact</a></li>
       </ul>
     </nav>
+  <div class="burger" id="menu">
+    <span class="burger_item" id="bar1"></span>
+    <span class="burger_item" id="bar2"></span>
+    <span class="burger_item" id="bar3"></span>
+  </div>
+
 </header>
 
 
@@ -16,7 +22,7 @@
 <router-outlet></router-outlet>
 
 <footer>
-  <p> <span style="color: #494949"> ©  {{year}} </span>  COMMUNICOM LLC</p>
+  <p class="year-and-name"> <span style="color: #494949"> ©  {{year}} </span>  COMMUNICOM LLC</p>
   <img src="assets/images/links-logo.JPG" alt="ccom logo">
   <p>ALL RIGHTS RESERVED</p>
 </footer>
