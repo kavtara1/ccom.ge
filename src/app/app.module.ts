@@ -16,6 +16,8 @@ import { CustomersComponent } from './partnersandcustomers/customers/customers.c
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ContactComponent } from './contact/contact.component';
+import { FacebookComponent } from './facebook/facebook.component';
+import { MotorolaComponent } from './motorola/motorola.component';
 
 
 const appRoutes: Routes = [
@@ -36,7 +38,9 @@ const appRoutes: Routes = [
     PartnersandcustomersComponent,
     PartnersComponent,
     CustomersComponent,
-    ContactComponent
+    ContactComponent,
+    FacebookComponent,
+    MotorolaComponent
   ],
   imports: [
     BrowserModule,

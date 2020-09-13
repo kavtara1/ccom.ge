@@ -1,0 +1,23 @@
+svg {
+  position: relative;
+  z-index: 11;
+}
+
+svg:hover {
+  fill: #094fa3;
+}
+
+.fb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  background-color: #8e8e8d;
+  height: 40px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: fixed;
+  top: 82%;
+  z-index: 10;
+
+}

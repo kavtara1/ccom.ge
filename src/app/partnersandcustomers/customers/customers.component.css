@@ -11,3 +11,11 @@
 .customer-img {
   width: 250px;
 }
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
