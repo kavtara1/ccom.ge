@@ -1,18 +1,27 @@
 <header>
-    <a class="logo_link" href="/"><img class="logo" src="assets/images/LOGO.png" alt="Ccom logo"></a>
+  <a class="logo_link" href="/"><img alt="Ccom logo" class="logo" src="assets/images/LOGO.png"></a>
 
-    <nav>
-      <ul [class.none]="!show" [class.nav]="show" >
-        <li><a routerLink="/">HOME</a></li>
-        <li><a routerLink="/services-and-solutions">Servises & Solutions</a></li>
-        <li><a routerLink="/partners-and-customers">Partners & customers</a></li>
-        <li><a routerLink="/contact">Contact</a></li>
-      </ul>
-    </nav>
-  <div class="burger" id="menu">
+  <nav>
+    <ul [class.nav]="show" [class.none]="!show">
+      <li><a routerLink="/">HOME</a></li>
+      <li><a routerLink="/services-and-solutions">Services & Solutions</a></li>
+      <li><a routerLink="/partners-and-customers">Partners & customers</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div (click)="ShowOverlay=!ShowOverlay" class="burger" id="menu">
     <span class="burger_item" id="bar1"></span>
     <span class="burger_item" id="bar2"></span>
     <span class="burger_item" id="bar3"></span>
+  </div>
+  <div *ngIf="ShowOverlay" class="overlay" id="burger_overlay">
+    <ul class="burger_list">
+      <li><a (click)="overlayClose()" routerLink="/">HOME</a></li>
+      <li><a (click)="overlayClose()" routerLink="/services-and-solutions">SERVIcES & SOLUTIONS</a></li>
+      <li><a (click)="overlayClose()" routerLink="/partners-and-customers">Partners & Customers</a></li>
+      <li><a (click)="overlayClose()" routerLink="/contact">Contact</a></li>
+
+    </ul>
   </div>
 
 </header>
@@ -23,8 +32,8 @@
 <router-outlet></router-outlet>
 
 <footer>
-  <p class="year-and-name"> <span style="color: #494949"> ©  {{year}} </span>  COMMUNICOM LLC</p>
-  <img src="assets/images/links-logo.JPG" alt="ccom logo">
+  <p class="year-and-name"><span style="color: #494949"> ©  {{year}} </span> COMMUNICOM LLC</p>
+  <img alt="ccom logo" src="assets/images/links-logo.JPG">
   <p>ALL RIGHTS RESERVED</p>
 </footer>
 

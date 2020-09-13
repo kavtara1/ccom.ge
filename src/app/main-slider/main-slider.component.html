@@ -1,7 +1,7 @@
 
 <div class="swiper-container" #slidesContainer>
   <div class="swiper-wrapper">
-    <div class="swiper-slide"   *ngFor="let slide of sliders"  [ngStyle]="{ 'background-image': 'url(' + slide.image_url + ')'}"> >
+    <div class="swiper-slide"   *ngFor="let slide of sliders"  [ngStyle]="{ 'background-image': 'url(' + slide.image_url + ')'}">
         <h1 class="slider-title">{{slide.slider_text_title}}</h1>
         <p class="slider-text">{{slide.slider_text}}</p>
     </div>

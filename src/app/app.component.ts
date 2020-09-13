@@ -9,8 +9,11 @@ export class AppComponent  implements OnInit {
   title = 'ccom';
   show: any = false;
   year: number = new Date().getFullYear();
-
+  ShowOverlay: boolean = false;
   constructor() {
+  }
+  overlayClose(){
+    this.ShowOverlay = false
   }
 
   ngOnInit(): void {
