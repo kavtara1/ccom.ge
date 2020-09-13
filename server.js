@@ -2,10 +2,10 @@ const express = require('express');
 
 const app = express();
 
-app.use(express.static('./dist/angular-heroku'));
+app.use(express.static('./dist/ccom'));
 
 app.get('/*', (req, res) =>
-  res.sendFile('index.html', {root: 'ccom/'}),
+  res.sendFile('index.html', {root: 'dist/ccom/'}),
 );
 
 app.listen(process.env.PORT || 8080);
