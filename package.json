@@ -21,10 +21,12 @@
     "@angular/router": "~10.0.3",
     "angular-read-more": "^1.0.7",
     "angular2-useful-swiper": "^8.0.1-beta.1",
+    "express": "^4.17.1",
     "gulp-bump": "^3.2.0",
     "ngx-owl-carousel-o": "^4.0.0",
     "ngx-useful-swiper": "^9.0.3",
     "rxjs": "~6.5.5",
+    "save": "^2.4.0",
     "swiper": "^6.2.0",
     "tslib": "^2.0.1",
     "zone.js": "~0.10.3"

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {OwlOptions} from 'ngx-owl-carousel-o';
+import Swiper from 'swiper';
 
 @Component({
   selector: 'app-partners',
@@ -13,6 +14,10 @@ export class PartnersComponent implements OnInit {
     partner_name: string;
     partner_image: string;
   }[];
+  swiper: Swiper;
+  @ViewChild('slidesContainer', {read: ElementRef, static: false})
+  slidesContainer: ElementRef;
+  ngAfter;
   constructor(http: HttpClient) {
     http.get('https://ccom-api.herokuapp.com/partnersslider')
       .subscribe((response:{
@@ -24,31 +29,27 @@ export class PartnersComponent implements OnInit {
       })
   }
 
-  ngOnInit(): void {
+  swiperfunc(){
+    this.swiper = new Swiper(this.slidesContainer.nativeElement, {
+      loop: true,
+      slidesPerView: 4,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+      },
+    });
+
   }
-  customOptions: OwlOptions = {
-    loop: true,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: false,
-    dots: true,
-    navSpeed: 700,
-    // navText: ['', ''],
-    responsive: {
-      0: {
-        items: 1
-      },
-      400: {
-        items: 2
-      },
-      740: {
-        items: 3
-      },
-      940: {
-        items: 5
-      }
-    },
-    // nav: true
+
+  ngAfterViewInit() {
+    this.swiperfunc()
+    setTimeout(()=> this.swiperfunc(), 1000)
+  }
+
+  ngOnInit(): void {
   }
 
 }
+

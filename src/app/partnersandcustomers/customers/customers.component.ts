@@ -1,16 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { OwlOptions } from 'ngx-owl-carousel-o';
+import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import Swiper from 'swiper';
 import {HttpClient} from '@angular/common/http';
 @Component({
   selector: 'app-customers',
   templateUrl: './customers.component.html',
   styleUrls: ['./customers.component.css']
 })
-export class CustomersComponent implements OnInit {
+export class CustomersComponent implements OnInit ,AfterViewInit {
   customerSlider: {
     customer_name: string;
     customer_image: string;
   }[];
+  swiper: Swiper;
+  @ViewChild('slidesContainer', {read: ElementRef, static: false})
+  slidesContainer: ElementRef;
+  ngAfter;
   constructor(http: HttpClient) {
     http.get('https://ccom-api.herokuapp.com/customersslider')
       .subscribe((response:{
@@ -21,31 +25,26 @@ export class CustomersComponent implements OnInit {
 
       })
   }
+  swiperfunc(){
+    this.swiper = new Swiper(this.slidesContainer.nativeElement, {
+      loop: true,
+      slidesPerView: 4,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+      },
+    });
+
+  }
+
+  ngAfterViewInit() {
+    this.swiperfunc()
+    setTimeout(()=> this.swiperfunc(), 1000)
+  }
 
   ngOnInit(): void {
-  }
-  customOptions: OwlOptions = {
-    loop: true,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: false,
-    dots: true,
-    navSpeed: 700,
-    responsive: {
-      0: {
-        items: 1
-      },
-      400: {
-        items: 2
-      },
-      740: {
-        items: 3
-      },
-      940: {
-        items: 4
-      }
-    },
-    // nav: true
   }
 
 }

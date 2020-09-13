@@ -2,10 +2,14 @@
   <h2>PARTNERS</h2>
   <div style="width: 80px; height: 3px; background-color: #094fa3; margin-top: 15px;"></div>
 </div>
-<owl-carousel-o [options]="customOptions">
-  <ng-template carouselSlide  *ngFor="let img of partnersSlider">
-    <img [src]="img.partner_image" style="width: 250px" alt="">
-  </ng-template>
-</owl-carousel-o>
+<div class="swiper-container" #slidesContainer>
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" *ngFor="let item of partnersSlider">
+      <img class="customer-img" [src]="item.partner_image" alt="">
+    </div>
 
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+</div>
 
