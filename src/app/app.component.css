@@ -173,29 +173,28 @@ header {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
+  flex-direction: column;
+
 
 
 }
 
 .burger_list li {
-  border-bottom: 1px solid #094fa3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 147px;
 }
 .burger_list li a {
   color: #FFFFFF;
-  font-family: caps, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #094fa3;
+
 }
 
 

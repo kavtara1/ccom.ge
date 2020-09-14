@@ -10,7 +10,21 @@ export class AppComponent  implements OnInit {
   show: any = false;
   year: number = new Date().getFullYear();
   ShowOverlay: boolean = false;
+  burger: boolean = false;
   constructor() {
+  }
+
+  overlayOpen(){
+
+    if (this.ShowOverlay == false){
+      this.ShowOverlay = true
+      this.burger = true
+    }
+
+    else  {
+      this.ShowOverlay = false
+      this.burger = false
+    }
   }
   overlayClose(){
     this.ShowOverlay = false

@@ -9,7 +9,9 @@
     </ul>
 <!--    [class.nav]="show" [class.none]="!show"-->
   </nav>
-  <div (click)="ShowOverlay=!ShowOverlay" class="burger" id="menu">
+  <div (click)="overlayOpen()"
+       [ngClass]="burger ? 'change' : 'burger'"
+        id="menu">
     <span class="burger_item" id="bar1"></span>
     <span class="burger_item" id="bar2"></span>
     <span class="burger_item" id="bar3"></span>
@@ -17,7 +19,7 @@
   <div *ngIf="ShowOverlay" class="overlay" id="burger_overlay">
     <ul class="burger_list">
       <li><a (click)="overlayClose()" routerLink="/">HOME</a></li>
-      <li><a (click)="overlayClose()" routerLink="/services-and-solutions">SERVIcES & SOLUTIONS</a></li>
+      <li><a (click)="overlayClose()" routerLink="/services-and-solutions">SERVICES & SOLUTIONS</a></li>
       <li><a (click)="overlayClose()" routerLink="/partners-and-customers">Partners & Customers</a></li>
       <li><a (click)="overlayClose()" routerLink="/contact">Contact</a></li>
 
