@@ -11,10 +11,14 @@
   font-family: light, sans-serif;
 
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0 auto;
   max-width: 1920px;
   background-color: #FFFFFF;
+
 }
 .body {
   overflow: hidden;

@@ -1,12 +1,13 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import Swiper from 'swiper';
 import {HttpClient} from '@angular/common/http';
+
 @Component({
   selector: 'app-customers',
   templateUrl: './customers.component.html',
   styleUrls: ['./customers.component.css']
 })
-export class CustomersComponent implements OnInit ,AfterViewInit {
+export class CustomersComponent implements OnInit, AfterViewInit {
   customerSlider: {
     customer_name: string;
     customer_image: string;
@@ -15,17 +16,19 @@ export class CustomersComponent implements OnInit ,AfterViewInit {
   @ViewChild('slidesContainer', {read: ElementRef, static: false})
   slidesContainer: ElementRef;
   ngAfter;
+
   constructor(http: HttpClient) {
     http.get('https://ccom-api.herokuapp.com/customersslider')
-      .subscribe((response:{
+      .subscribe((response: {
         customer_name: string;
         customer_image: string;
-      }[]) =>{
-        this.customerSlider = response
+      }[]) => {
+        this.customerSlider = response;
 
-      })
+      });
   }
-  swiperfunc(){
+
+  swiperfunc() {
     this.swiper = new Swiper(this.slidesContainer.nativeElement, {
       loop: true,
       slidesPerView: 4,
@@ -57,8 +60,8 @@ export class CustomersComponent implements OnInit ,AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.swiperfunc()
-    setTimeout(()=> this.swiperfunc(), 1000)
+    this.swiperfunc();
+    setTimeout(() => this.swiperfunc(), 1000);
   }
 
   ngOnInit(): void {

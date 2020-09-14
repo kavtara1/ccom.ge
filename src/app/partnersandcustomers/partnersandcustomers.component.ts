@@ -21,6 +21,11 @@ export class PartnersandcustomersComponent implements OnInit {
 
       })
   }
+  scrollToCustomers() {
+    let customers = document.getElementById("customers");
+    customers.scrollIntoView()
+    console.log("scroll")
+  }
 
   ngOnInit(): void {
 

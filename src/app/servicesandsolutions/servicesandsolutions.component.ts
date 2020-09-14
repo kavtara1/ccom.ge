@@ -22,6 +22,10 @@ export class ServicesandsolutionsComponent implements OnInit {
 
       })
   }
+  scrollToSolution(){
+    let content = document.getElementById("solutions")
+    content.scrollIntoView()
+  }
 
   ngOnInit(): void {
   }
