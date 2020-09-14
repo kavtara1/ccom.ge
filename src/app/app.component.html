@@ -1,13 +1,13 @@
 <header>
   <a class="logo_link" href="/"><img alt="Ccom logo" class="logo" src="assets/images/LOGO.png"></a>
-
   <nav>
-    <ul [class.nav]="show" [class.none]="!show">
+    <ul class="nav" >
       <li><a routerLink="/">HOME</a></li>
       <li><a routerLink="/services-and-solutions">Services & Solutions</a></li>
       <li><a routerLink="/partners-and-customers">Partners & customers</a></li>
       <li><a routerLink="/contact">Contact</a></li>
     </ul>
+<!--    [class.nav]="show" [class.none]="!show"-->
   </nav>
   <div (click)="ShowOverlay=!ShowOverlay" class="burger" id="menu">
     <span class="burger_item" id="bar1"></span>

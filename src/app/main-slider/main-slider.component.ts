@@ -63,7 +63,7 @@ export class MainSliderComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
 
       this.swiperfunc()
-    setTimeout(()=> this.swiperfunc(), 1000)
+    setTimeout(()=> this.swiperfunc(), 1500)
   }
 
   ngOnInit(): void {

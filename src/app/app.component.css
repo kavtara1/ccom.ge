@@ -27,6 +27,7 @@ header {
   align-items: center;
   height: 140px;
   width: 100vw;
+  position: relative;
 }
 .logo {
   width: 250px;
@@ -40,7 +41,7 @@ header {
 
 }
 .none {
-  display: none;
+  opacity: 0;
 }
 @keyframes moveInfromLeft {
   0% {
@@ -61,8 +62,6 @@ header {
     opacity: 0;
     transform: translateX(-1000px);
 
-
-
   }
 
   100% {
@@ -77,13 +76,10 @@ header {
   width: 70%;
   float: right;
   align-items: center;
-  animation: navMoveInFromLeft;
-  animation-name: navMoveInFromLeft;
-  animation-duration: 1.5s;
+  animation: moveInfromLeft;
+  animation-name: moveInfromLeft;
+  animation-duration: 2s;
   animation-timing-function: ease-out;
-  /*position: absolute;*/
-  /*left: 800px;*/
-  /*z-index: 5;*/
   position: relative;
   top: 35px;
   background-color: black;

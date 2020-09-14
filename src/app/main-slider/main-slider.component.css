@@ -26,6 +26,9 @@
   border-left: 2px solid #094fa3;
   padding-left: 15px;
   max-width: 70%;
+  animation: moveInfromBot;
+  animation-name: moveInfromBot;
+  animation-duration: 2.5s;
 }
 
 .slider-title {
@@ -38,6 +41,10 @@
   padding-left: 15px;
   letter-spacing: 20px;
   max-width: 70%;
+  animation: moveInfromBot;
+  animation-name: moveInfromBot;
+  animation-duration: 2s;
+
 
 }
 
@@ -50,12 +57,33 @@ svg:hover {
   fill: #094fa3;
 }
 
+.cover-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
 
+
+}
 
 .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
   position: relative;
   right: 25px;
 
+}
+@keyframes moveInfromBot {
+  0% {
+    opacity: 0;
+    transform: translateY(1000px);
+
+  }
+
+  100% {
+
+    opacity: 1;
+    transform: translate(0);
+
+  }
 }
 
 @media only screen  and (min-width:1200px) and (max-width: 1450px) {
@@ -90,6 +118,9 @@ svg:hover {
     display: none;
   }
   .slider-img {
+    height: calc(100vh - 70px);
+  }
+  .cover-img {
     height: calc(100vh - 70px);
   }
   }
