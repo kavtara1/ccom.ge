@@ -16,3 +16,6 @@ body {
   max-width: 1920px;
   background-color: #FFFFFF;
 }
+.body {
+  overflow: hidden;
+}

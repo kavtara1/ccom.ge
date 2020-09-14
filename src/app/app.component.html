@@ -1,5 +1,5 @@
 <header>
-  <a class="logo_link" href="/"><img alt="Ccom logo" class="logo" src="assets/images/LOGO.png"></a>
+  <a class="logo_link" routerLink="/"><img alt="Ccom logo" class="logo" src="assets/images/LOGO.png"></a>
   <nav>
     <ul class="nav" >
       <li><a routerLink="/">HOME</a></li>
@@ -24,6 +24,11 @@
       <li><a (click)="overlayClose()" routerLink="/contact">Contact</a></li>
 
     </ul>
+    <div class="burger_footer">
+      <p class="year-and-name"><span style="color: #494949"> ©  {{year}} </span> COMMUNICOM LLC</p>
+      <img alt="ccom logo" src="assets/images/links-logo.JPG">
+      <p class="rights">ALL RIGHTS RESERVED</p>
+    </div>
   </div>
 
 </header>

@@ -33,11 +33,14 @@ header {
   width: 250px;
 
 }
+
 .logo_link {
   animation: moveInfromLeft;
   animation-name: moveInfromLeft;
   animation-duration: 1.5s;
   animation-timing-function: ease-out;
+  position: relative;
+  z-index: 150;
 
 }
 .none {
@@ -163,6 +166,7 @@ header {
   background-color: #141519;
   z-index: 7;
   overflow: hidden;
+  height: 100vh;
 }
 
 .burger_list {
@@ -196,8 +200,32 @@ header {
   border-bottom: 1px solid #094fa3;
 
 }
+.burger_footer img {
+  width: 25px;
+  padding-bottom: 15px;
+}
+.burger_footer {
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  transform: translate(-50%, -50%);
+  /*margin: 0 auto;*/
 
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.year-and-name {
+  color: #FFFFFF;
+  letter-spacing: 3px;
+  font-size: 9px;
+}
+.rights {
+  color: #FFFFFF;
+  letter-spacing: 3px;
+  font-size: 9px;
+}
 /*burger*/
 @media only screen  and (min-width:320px) and (max-width: 420px) {
 .nav {

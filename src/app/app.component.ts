@@ -11,7 +11,9 @@ export class AppComponent  implements OnInit {
   year: number = new Date().getFullYear();
   ShowOverlay: boolean = false;
   burger: boolean = false;
+
   constructor() {
+
   }
 
   overlayOpen(){
@@ -19,15 +21,18 @@ export class AppComponent  implements OnInit {
     if (this.ShowOverlay == false){
       this.ShowOverlay = true
       this.burger = true
+      let body = document.querySelector('body').classList.add("body")
     }
 
     else  {
       this.ShowOverlay = false
       this.burger = false
+      let body = document.querySelector('body').classList.remove("body")
     }
   }
   overlayClose(){
     this.ShowOverlay = false
+    this.burger = false
   }
 
   ngOnInit(): void {
