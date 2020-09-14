@@ -29,7 +29,18 @@ export class AboutComponent implements OnInit {
         this.links = response
       })
 
+
   }
+  scrollToSolution(){
+    let solutions = document.getElementById("solutions")
+    solutions.scrollIntoView()
+  }
+  timeOutFunction(){
+    setTimeout(()=> this.scrollToSolution(), 300)
+  }
+
+
+
   ngOnInit(): void {
   }
 

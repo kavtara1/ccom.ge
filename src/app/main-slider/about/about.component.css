@@ -39,6 +39,7 @@
 .empty {
   width: 40%;
 }
+
 .solution-heading {
   position: relative;
   left: -20px;
@@ -68,6 +69,7 @@
 
 .link-list>a:hover {
   color: #094fa3;
+  cursor: pointer;
 }
 .link-list {
   padding-bottom: 25px;

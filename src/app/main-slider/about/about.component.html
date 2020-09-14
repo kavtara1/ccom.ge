@@ -16,7 +16,7 @@
     <ul>
       <li *ngFor="let item of links" class="link-list">
         <img alt="icon" class="link-logo" src="./assets/images/links-logo.JPG">
-        <a class="link" routerLink="/services-and-solutions">{{item.link}}</a>
+        <a class="link" (click)="timeOutFunction()" routerLink="/services-and-solutions">{{item.link}}</a>
       </li>
     </ul>
   </div>
