@@ -37,10 +37,11 @@ header {
 .logo_link {
   animation: moveInfromLeft;
   animation-name: moveInfromLeft;
-  animation-duration: 1.5s;
+  animation-duration: 2s;
   animation-timing-function: ease-out;
   position: relative;
   z-index: 150;
+  left: -146px;
 
 }
 .none {
@@ -49,9 +50,15 @@ header {
 @keyframes moveInfromLeft {
   0% {
     opacity: 0;
-    transform: translateX(-1000px);
+    transform: translateX(-4000px);
 
   }
+  /* 50% {
+    opacity: 0.5;
+    transform: translateX(0px);
+
+  } */
+
 
   100% {
 
@@ -76,12 +83,12 @@ header {
 .nav {
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  width: 76%;
   float: right;
   align-items: center;
   animation: moveInfromLeft;
   animation-name: moveInfromLeft;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-timing-function: ease-out;
   position: relative;
   top: 35px;

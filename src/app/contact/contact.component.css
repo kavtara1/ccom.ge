@@ -69,6 +69,7 @@ h2::after {
 .email  {
   margin-left: 20px;
   letter-spacing: 5px;
+  color: black;
 }
 .number {
   margin-left: 20px;
