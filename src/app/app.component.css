@@ -248,6 +248,10 @@ header {
     display: flex;
 
   }
+  .logo_link {
+    position: relative;
+    left: 0px;
+  }
   .burger {
     display: flex;
   }
