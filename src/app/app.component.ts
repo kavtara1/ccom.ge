@@ -33,6 +33,7 @@ export class AppComponent  implements OnInit {
   overlayClose(){
     this.ShowOverlay = false
     this.burger = false
+    let body = document.querySelector('body').classList.remove("body")
   }
 
   ngOnInit(): void {

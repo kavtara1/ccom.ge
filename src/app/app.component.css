@@ -257,6 +257,9 @@ header {
   .year-and-name {
     order: 1;
   }
+  .burger_footer img {
+    order: -1;
+  }
 }
 
   @media only screen  and (min-width:1200px) and (max-width: 1450px) {
