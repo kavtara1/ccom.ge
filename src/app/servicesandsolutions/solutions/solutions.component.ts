@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
 @Component({
@@ -6,12 +6,14 @@ import {HttpClient} from '@angular/common/http';
   templateUrl: './solutions.component.html',
   styleUrls: ['./solutions.component.css']
 })
-export class SolutionsComponent implements OnInit {
+
+export class SolutionsComponent implements OnInit, AfterViewInit {
   solution: {
     title: string;
     description: string;
     image: string;
   }[];
+
   constructor(http: HttpClient) {
     http.get('https://ccom-api.herokuapp.com/solutions')
       .subscribe((response:{
@@ -23,7 +25,24 @@ export class SolutionsComponent implements OnInit {
 
       })
   }
-  ngOnInit(): void {
+  getTexts(){
+    let texts = document.getElementsByClassName("solution-text")
+    for (let i =0; i <= texts.length; i ++){
+      console.log(texts[i])
+
+    }
   }
+  ngAfterViewInit() {
+    this.getTexts()
+    setTimeout(()=> this.getTexts(), 1500)
+  }
+
+
+
+  ngOnInit(): void {
+
+  }
+
+
 
 }

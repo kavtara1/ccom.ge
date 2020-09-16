@@ -18,6 +18,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ContactComponent } from './contact/contact.component';
 import { FacebookComponent } from './facebook/facebook.component';
 import { MotorolaComponent } from './motorola/motorola.component';
+import { SolutionItemComponent } from './servicesandsolutions/solutions/solution-item/solution-item.component';
+import { ServicesItemComponent } from './servicesandsolutions/services/services-item/services-item.component';
 
 
 const appRoutes: Routes = [
@@ -40,7 +42,9 @@ const appRoutes: Routes = [
     CustomersComponent,
     ContactComponent,
     FacebookComponent,
-    MotorolaComponent
+    MotorolaComponent,
+    SolutionItemComponent,
+    ServicesItemComponent
   ],
   imports: [
     BrowserModule,

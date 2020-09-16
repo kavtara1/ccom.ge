@@ -1,0 +1,124 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+section h2 {
+  font-size: 33px;
+  padding-bottom: 30px;
+}
+.service_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.service_list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: 500px;
+
+}
+.service_list li span {
+  padding-bottom: 25px;
+}
+
+.text_span{
+  display: inline-block;
+  width: 450px;
+  padding-top: 25px;
+}
+
+section h2::after {
+  display: block;
+  content: '';
+  width: 88px;
+  height: 5px;
+  background-color: #094fa3;
+  position: relative;
+  top: 10px;
+  right: -40px;
+}
+.services-text {
+  height: calc(100vh - 140px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-text p {
+  width: 70%;
+}
+
+.services-text p::after {
+  content: "";
+  width: 50px;
+  background: url("/assets/images/down-arrow.png");
+  display: block;
+
+}
+
+.services-text h1 {
+  padding-bottom: 25px;
+  font-size: 33px;
+  text-transform: uppercase;
+}
+
+.services-text h1::after {
+  display: block;
+  content: '';
+  width: 88px;
+  height: 5px;
+  background-color: #094fa3;
+  position: relative;
+  top: 10px;
+  right: -170px;
+}
+
+.container {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sectoin-img img {
+  width: 50px;
+}
+
+.read-more {
+  font-size: 12px;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 5px;
+  margin-left: 10px;
+
+}
+.read-more:hover {
+  background: #094fa3;
+  color: #FFFFFF;
+}
+
+@media only screen  and (min-width:320px) and (max-width: 420px) {
+  section h2{
+    font-size: 22px;
+  }
+  section h2::after {
+    right: -8px;
+  }
+  h3 {
+    font-size: 13px;
+  }
+  .service_list li p {
+    width: 270px;
+    font-size: 13px;
+  }
+}
