@@ -10,10 +10,12 @@ import {HttpClient} from '@angular/common/http';
 })
 export class MainSliderComponent implements OnInit, AfterViewInit {
   sliders: {
-    image_url: string;
     slider_text_title: string;
     slider_text: string;
   }[];
+  coverImage : {
+      image_url: string
+  }[]
   swiper: Swiper;
 
   @ViewChild('slidesContainer', {read: ElementRef, static: false})
@@ -23,11 +25,17 @@ export class MainSliderComponent implements OnInit, AfterViewInit {
   constructor(http: HttpClient) {
     http.get('https://ccom-api.herokuapp.com/slider')
       .subscribe((response: {
-        image_url: string;
         slider_text_title: string;
         slider_text: string;
       }[]) => {
         this.sliders = response;
+
+      });
+    http.get('https://ccom-api.herokuapp.com/Coverimage')
+      .subscribe((response: {
+        image_url: string
+      }[]) => {
+        this.coverImage = response;
 
       });
   }

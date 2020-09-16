@@ -7,7 +7,7 @@
     </div>
 <!--    [ngStyle]="{ 'background-image': 'url(' + slide.image_url + ')'}"-->
   </div>
-  <img class="cover-img" src="assets/images/20794.jpg" alt="">
+  <img *ngFor="let img of coverImage" class="cover-img" [src]="img.image_url" alt="">
 
   <div (click)="next()"
     class="swiper-button-next swiper-button-white">
