@@ -88,10 +88,10 @@ svg:hover {
 
 @media only screen  and (min-width:1200px) and (max-width: 1450px) {
   .slider-title {
-    bottom: 500px;
+    /*bottom: 500px;*/
   }
   .slider-text {
-    bottom: 500px;
+    /*bottom: 500px;*/
   }
 
 }
