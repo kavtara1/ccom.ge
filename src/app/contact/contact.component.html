@@ -106,7 +106,7 @@
           <g>
 </g>
 </svg>
-        <a class="number" href=""> {{items.phone_number}}</a>
+        <a class="number" [href]="'tel:' + items.phone_number"> {{items.phone_number}}</a>
       </div>
       <div class="address">
         <svg id="Capa_1" style="enable-background:new 0 0 241.061 241.061;" version="1.1" viewBox="0 0 241.061 241.061" width="20px" x="0px"
@@ -152,7 +152,7 @@
 </g>
 </svg>
 
-        <a class="email" href="mailto:info@ccom.ge"> {{items.email}}</a>
+        <a class="email" [href]=" 'mailto:' + items.email"> {{items.email}}</a>
       </div>
     </div>
     <div class="working-hours">
