@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import Swiper from 'swiper';
+import Swiper, {Autoplay} from 'swiper';
 import {HttpClient} from '@angular/common/http';
 
 @Component({
@@ -13,6 +13,7 @@ export class CustomersComponent implements OnInit, AfterViewInit {
     customer_image: string;
   }[];
   swiper: Swiper;
+
   @ViewChild('slidesContainer', {read: ElementRef, static: false})
   slidesContainer: ElementRef;
   ngAfter;
@@ -26,17 +27,24 @@ export class CustomersComponent implements OnInit, AfterViewInit {
         this.customerSlider = response;
 
       });
+    Swiper.use([Autoplay])
+
   }
 
   swiperfunc() {
+
     this.swiper = new Swiper(this.slidesContainer.nativeElement, {
       loop: true,
-      slidesPerView: 4,
+      // slidesPerView: 6,
       spaceBetween: 30,
+      slidesPerGroup: 5,
       pagination: {
         el: '.swiper-pagination',
-        type: 'bullets',
         clickable: true,
+      },
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: true
       },
       breakpoints: {
         320: {
@@ -52,10 +60,31 @@ export class CustomersComponent implements OnInit, AfterViewInit {
         640: {
           slidesPerView: 4,
           spaceBetween: 40
-        }
+        },
+        1000: {
+          loop: true,
+          centeredSlides: false,
+          slidesPerView: 5,
+          spaceBetween: 40,
+          autoplay: {
+            delay:1000,
+            disableOnInteraction: true
+          }
+        },
+
       }
 
     });
+
+  }
+
+  next() {
+    this.swiper.slideNext();
+
+  }
+
+  prev() {
+    this.swiper.slidePrev();
 
   }
 

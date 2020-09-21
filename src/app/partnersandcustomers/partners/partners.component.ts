@@ -1,7 +1,6 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {OwlOptions} from 'ngx-owl-carousel-o';
-import Swiper from 'swiper';
+import Swiper, {Autoplay} from 'swiper';
 
 @Component({
   selector: 'app-partners',
@@ -27,17 +26,22 @@ export class PartnersComponent implements OnInit {
         this.partnersSlider = response
 
       })
+    Swiper.use([Autoplay])
   }
 
   swiperfunc(){
     this.swiper = new Swiper(this.slidesContainer.nativeElement, {
       loop: true,
-      slidesPerView: 4,
+      // slidesPerView: 6,
       spaceBetween: 30,
+      slidesPerGroup: 5,
       pagination: {
         el: '.swiper-pagination',
-        type: 'bullets',
         clickable: true,
+      },
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: true
       },
       breakpoints: {
         320: {
@@ -53,9 +57,30 @@ export class PartnersComponent implements OnInit {
         640: {
           slidesPerView: 4,
           spaceBetween: 40
-        }
+        },
+        1000: {
+          loop: true,
+          centeredSlides: false,
+          slidesPerView: 5,
+          spaceBetween: 40,
+          autoplay: {
+            delay:1000,
+            disableOnInteraction: true
+          }
+        },
+
       }
+
     });
+
+  }
+  next() {
+    this.swiper.slideNext();
+
+  }
+
+  prev() {
+    this.swiper.slidePrev();
 
   }
 
