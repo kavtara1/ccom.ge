@@ -37,7 +37,7 @@ export class CustomersComponent implements OnInit, AfterViewInit {
       loop: true,
       // slidesPerView: 6,
       spaceBetween: 30,
-      slidesPerGroup: 5,
+      slidesPerGroup: 1,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -48,7 +48,7 @@ export class CustomersComponent implements OnInit, AfterViewInit {
       },
       breakpoints: {
         320: {
-          slidesPerView: 2,
+          slidesPerView: 1,
           spaceBetween: 20
         },
         // when window width is >= 480px
@@ -67,7 +67,7 @@ export class CustomersComponent implements OnInit, AfterViewInit {
           slidesPerView: 5,
           spaceBetween: 40,
           autoplay: {
-            delay:1000,
+            delay:3000,
             disableOnInteraction: true
           }
         },

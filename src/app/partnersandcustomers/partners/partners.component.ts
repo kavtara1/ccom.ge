@@ -34,7 +34,7 @@ export class PartnersComponent implements OnInit {
       loop: true,
       // slidesPerView: 6,
       spaceBetween: 30,
-      slidesPerGroup: 5,
+      slidesPerGroup: 1,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -45,7 +45,7 @@ export class PartnersComponent implements OnInit {
       },
       breakpoints: {
         320: {
-          slidesPerView: 2,
+          slidesPerView: 1,
           spaceBetween: 20
         },
         // when window width is >= 480px
@@ -64,7 +64,7 @@ export class PartnersComponent implements OnInit {
           slidesPerView: 5,
           spaceBetween: 40,
           autoplay: {
-            delay:1000,
+            delay:3000,
             disableOnInteraction: true
           }
         },
