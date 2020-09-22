@@ -46,7 +46,11 @@ export class PartnersComponent implements OnInit {
       breakpoints: {
         320: {
           slidesPerView: 1,
-          spaceBetween: 20
+          spaceBetween: 20,
+          autoplay: {
+            delay:3000,
+            disableOnInteraction: true
+          }
         },
         // when window width is >= 480px
         480: {
