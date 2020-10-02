@@ -12,8 +12,8 @@
 import sslRedirect from 'heroku-ssl-redirect';
 import express from 'express';
 
-var sslRedirect = require('heroku-ssl-redirect');
-var express = require('express');
+// var sslRedirect = require('heroku-ssl-redirect');
+// var express = require('express');
 var app = express();
 app.use(express.static('./dist/ccom'));
  
