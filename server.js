@@ -19,6 +19,11 @@ var app = express();
 app.use(sslRedirect());
  
 app.get('/', function(req, res){
+  console.log('_____________________________');
+  
+  console.log(req, res);
+  
+  console.log('_____________________________');
   res.sendFile('index.html', {root: 'dist/ccom/'})
 });
-
+app.listen(3000);
