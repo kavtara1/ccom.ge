@@ -5,7 +5,7 @@
 // app.use(express.static('./dist/ccom'));
 
 // app.get('/*', (req, res) =>
-//   res.sendFile('index.html', {root: 'dist/ccom/'}),
+  // res.sendFile('index.html', {root: 'dist/ccom/'}),
 // );
 
 // app.listen(process.env.PORT || 8080);
@@ -19,6 +19,6 @@ var app = express();
 app.use(sslRedirect());
  
 app.get('/', function(req, res){
-  res.send('hello world');
+  res.sendFile('index.html', {root: 'dist/ccom/'})
 });
 
