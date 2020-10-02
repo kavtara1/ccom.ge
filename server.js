@@ -16,7 +16,7 @@ var sslRedirect = require('heroku-ssl-redirect');
 var express = require('express');
 var app = express();
  
-app.use(sslRedirect());
+// app.use(sslRedirect());
  
 app.get('/', function(req, res){
   console.log('_____________________________');
@@ -26,4 +26,6 @@ app.get('/', function(req, res){
   console.log('_____________________________');
   res.sendFile('index.html', {root: 'dist/ccom/'})
 });
-app.listen(3000);
+app.listen(3000,function(){
+  console.log(sslRedirect)
+});
