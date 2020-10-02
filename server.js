@@ -9,14 +9,18 @@
 // );
 
 // app.listen(process.env.PORT || 8080);
-import sslRedirect from 'heroku-ssl-redirect';
+
+
+import sslRedirect from 'heroku-ssl-redirect/dist/index';
 import express from 'express';
+
+
 
 // var sslRedirect = require('heroku-ssl-redirect');
 // var express = require('express');
 var app = express();
 app.use(express.static('./dist/ccom'));
- 
+
 app.use(sslRedirect());
  
 app.get('/', function(req, res){
