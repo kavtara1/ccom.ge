@@ -5,13 +5,14 @@ const port = process.env.PORT || 9000;
 
 
 
-app.use((req, res, next) => {
-  console.log(123);
-  let jora = "https://" + req.headers.host + req.url
-  console.log(jora);
-  res.redirect(jora)
-});
+// app.use((req, res, next) => {
+//   console.log(123);
+//   let jora = "https://" + req.headers.host + req.url
+//   console.log(jora);
+//   res.redirect(jora)
+// });
 
+app.use(express.static('./dist/ccom'));
 
 app.get('/', (req, res) => {
   console.log(1111111111111111111111);
@@ -19,7 +20,6 @@ app.get('/', (req, res) => {
   
 });
 
-// app.use(express.static('./dist/ccom'));
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
