@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 9000;
 
-// app.use(express.static('./dist/ccom'));
+app.use(express.static('./dist/ccom'));
 
 app.use((req, res, next) => {
   console.log(123);
@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 
 app.get('/', (req, res) => {
   console.log(1111111111111111111111);
-  // res.sendFile('index.html', { root: 'dist/ccom/' });
+  res.sendFile('index.html', { root: 'dist/ccom/' });
 });
 
 app.listen(port, () => {
