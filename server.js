@@ -20,13 +20,8 @@ app.use(express.static('./dist/ccom'));
 app.use(sslRedirect());
  
 app.get('/', function(req, res){
-  console.log('_____________________________');
-  
-  console.log(req, res);
-  
-  console.log('_____________________________');
+
   res.sendFile('index.html', {root: 'dist/ccom/'})
 });
-app.listen(3000,function(){
-  console.log(sslRedirect)
-});
+
+app.listen(process.env.PORT || 3000);
