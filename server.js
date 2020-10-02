@@ -11,7 +11,7 @@
 // app.listen(process.env.PORT || 8080);
 
 
-import sslRedirect from 'heroku-ssl-redirect/dist/index';
+import sslRedirect from 'heroku-ssl-redirect/dist/index.js';
 import express from 'express';
 
 
@@ -24,7 +24,6 @@ app.use(express.static('./dist/ccom'));
 app.use(sslRedirect());
  
 app.get('/', function(req, res){
-
   res.sendFile('index.html', {root: 'dist/ccom/'})
 });
 
