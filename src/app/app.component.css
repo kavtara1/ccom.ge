@@ -26,7 +26,7 @@ header {
   justify-content: space-around;
   align-items: center;
   height: 140px;
-  width: 99vw;
+  /*width: 99vw;*/
   position: relative;
 }
 .logo {
