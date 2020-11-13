@@ -58,23 +58,23 @@ const appRoutes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  // window:any = window
-  // constructor(public router: Router){
-  //   this.window.dataLayer = this.window.dataLayer || [];
-  //   this.router.events.subscribe(event => {
-  //       if(event instanceof NavigationEnd){
-  //         this.gtag('config', 'G-TKJ4303B4K',
-  //           {
-  //             'page_path': event.urlAfterRedirects
-  //           }
-  //         );
-  //       }
-  //     }
-  //   )}
-  // gtag(a:any,b,c) {
-  //
-  //   this.window.dataLayer.push(a);
-  //
-  // }
+  window:any = window
+  constructor(public router: Router){
+    this.window.dataLayer = this.window.dataLayer || [];
+    this.router.events.subscribe(event => {
+        if(event instanceof NavigationEnd){
+          this.gtag('config', 'G-TKJ4303B4K',
+            {
+              'page_path': event.urlAfterRedirects
+            }
+          );
+        }
+      }
+    )}
+  gtag(a:any,b,c) {
+
+    this.window.dataLayer.push(a);
+
+  }
 
 }
