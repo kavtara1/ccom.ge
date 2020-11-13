@@ -1,7 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
-import {RouterModule, Routes} from '@angular/router';
+import {NavigationEnd, RouterModule, Routes, Router} from '@angular/router';
 import {AppComponent} from './app.component';
 import {MainSliderComponent} from './main-slider/main-slider.component';
 import {NgxUsefulSwiperModule} from 'ngx-useful-swiper';
@@ -58,5 +58,23 @@ const appRoutes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule {
+  window:any = window
+  constructor(public router: Router){
+    this.window.dataLayer = this.window.dataLayer || [];
+    this.router.events.subscribe(event => {
+        if(event instanceof NavigationEnd){
+          this.gtag('config', 'G-TKJ4303B4K',
+            {
+              'page_path': event.urlAfterRedirects
+            }
+          );
+        }
+      }
+    )}
+  gtag(a:any,b,c) {
+
+    this.window.dataLayer.push(a);
+
+  }
 
 }
