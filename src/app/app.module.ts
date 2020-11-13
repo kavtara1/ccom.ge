@@ -63,7 +63,7 @@ export class AppModule {
     this.window.dataLayer = this.window.dataLayer || [];
     this.router.events.subscribe(event => {
         if(event instanceof NavigationEnd){
-          this.gtag('config', 'G-TKJ4303B4K',
+          this.gtag('config', 'G-E64Z80ZTDT',
             {
               'page_path': event.urlAfterRedirects
             }
